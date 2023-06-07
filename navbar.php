@@ -72,6 +72,23 @@
                 </div>
             </li>
 
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#headingBrand"
+                    aria-expanded="true" aria-controls="headingBrand">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Brand</span>
+                </a>
+                <div id="headingBrand" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Brand:</h6>
+                        <a class="collapse-item" href="brand.php">Add Brand</a>
+                        <a class="collapse-item" href="view_brand.php">View Brand</a>
+                    </div>
+                </div>
+            <!-- </li> -->
+
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
