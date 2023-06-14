@@ -42,7 +42,7 @@ if(mysqli_num_rows($result)>0){ //function to count the number of rows in the 2d
                
                  <td> ".$row['name'] ." </td>
             
-                 <td><a href=delete_brand.php?ID=".$row['id']."> <img src=images/Remove.png width=30px></a><a href=update_category.php?ID=".$row['id']."> <img src=images/Edit.png width=30px ></a></td>
+                 <td><a href=delete_brand.php?ID=".$row['id']."> <img src=images/Remove.png width=30px></a><a href=update_brand.php?ID=".$row['id']."> <img src=images/Edit.png width=30px ></a></td>
                  
         </tr>";
           

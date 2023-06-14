@@ -20,7 +20,7 @@ $result = mysqli_query($con, $query);
 
 ?>
 
-<center>
+
     
     <h1 style="margin-top: 30px;"> <b> Products</b></h1>
     <table  class="container-fluid table table-hover">
@@ -46,7 +46,7 @@ if(mysqli_num_rows($result)>0){ //function to count the number of rows in the 2d
                  <td> ".$row['description'] ." </td>
                  <td> ".$row['price'] ." </td>
                  <td> ".$row['quantity'] ." </td>
-                 <td><a href=delete_products.php?ID=".$row['id']."> <img src=images/Remove.png width=30px></a><a href=update_category.php?ID=".$row['id']."> <img src=images/Edit.png width=30px ></a></td>
+                 <td><a href=delete_products.php?ID=".$row['id']."> <img src=images/Remove.png width=30px></a><a href=update_products.php?ID=".$row['id']."> <img src=images/Edit.png width=30px ></a></td>
                  
         </tr>";
           
@@ -67,7 +67,7 @@ else{
 ?>
 
     </table>
-</center>
+
 </div>
 
 

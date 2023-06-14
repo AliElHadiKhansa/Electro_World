@@ -66,7 +66,7 @@
                 <div id="ProductsTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Products:</h6>
-                        <a class="collapse-item" href="products.php">Add Products</a>
+                        <a class="collapse-item" href="add_products.php">Add Products</a>
                         <a class="collapse-item" href="view_products.php">View Products</a>
                     </div>
                 </div>
