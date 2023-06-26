@@ -9,7 +9,8 @@
     $price= $_POST['price']; 
     $quantity = $_POST['quantity'];
     $brand = $_POST['brand'];
-    $category = $_Post['category'];
+    $category = $_POST['category'];
+   
 $file_name=$_FILES['image']['name'];
 
 
