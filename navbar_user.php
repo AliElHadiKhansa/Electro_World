@@ -22,9 +22,32 @@
       <li class="nav-item">
         <a class="nav-link" href="home.php">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="items.php">Products</a>
-      </li>
+      <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+      <select class="form-control" name="category" id="category">
+      <?php
+    include "db_config/connect.php";
+
+    $query = "SELECT * FROM category";
+    $result = mysqli_query($con, $query);
+
+    // Loop through the retrieved categories and create dropdown list options
+    if ($result && mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
+      }
+    } else {
+      echo "<option value=''>No categories found</option>";
+    }
+    ?>
+  </select>
+
+ </ul>
+</li>
       <li class="nav-item">
         <a class="nav-link " href="about.php">About us</a>
       </li>
@@ -32,7 +55,7 @@
         <a class="nav-link " href="contact.php">Contact us</a>
       </li>
     </ul>
-   
+
   </div>
 </nav>
 </body>
