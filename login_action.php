@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) > 0) {
     if ($row['roleid'] == 1) {
         header("location: index.php");     } 
         else {
-        header("location: products.php");     }
+        header("location: home.php");     }
     exit();
 } else {
     header("Location: login.php?error=1"); 

@@ -39,7 +39,7 @@ $extensions=array("jpg","jpeg","png","pdf");
         move_uploaded_file($file_tmp, "./images/".$file_name);
  
        
- 
+ 0
     $query="insert into product (name,description,price,quantity,image, brandid,categoryid) values ('$name','$description','$price','$quantity','$file_name','$brand','$category')";
     mysqli_query($con,$query);
 

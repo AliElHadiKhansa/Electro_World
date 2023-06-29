@@ -51,7 +51,11 @@ if ($result && mysqli_num_rows($result) > 0) {
                     <p class="card-text"><strong>Brand:</strong> <?php echo $brandname; ?></p>
                 </div>
                 <div class="col-6 m-3">
-                         
+    <form method="POST" action="add_to_Cart.php">  
+    <input type="hidden" name="product_id" value="<?php echo $id; ?>">
+    <input type="hidden" name="price" value="<?php echo $product_price;?>">
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" min="1" max="<?php echo $product_quantity; ?>">               
    <button class="btn btn-primary btn-user btn-block">   
    Buy 
 </a>

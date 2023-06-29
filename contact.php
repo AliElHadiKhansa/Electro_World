@@ -20,9 +20,7 @@
     require "navbar_user.php" ;
     ?>
     
-      <div class="content mt-5 ">
-        <img src="images/logo.jpg" class="rounded mx-auto d-block" style="margin-top:100px;" >
-           </div>
+      
 
 <div  style="display: flex; align-items: center; justify-content: center; "class="container-fluid p-5 bg-primary text-white">
          
@@ -49,7 +47,7 @@
         </form>
     </div>
            
-<img  class = "col-4"style="max-width: 100%; height: 300px;margin-left:50px" src="/images/aboutus.jpg">
+<img  class = "col-4"style="max-width: 100%; height: 300px;margin-left:50px" src="images/logo.png">
         </div>
         </div>
         <footer class="text-center text-lg-start bg-light ">
@@ -71,23 +69,7 @@
                   </div>
                   
           
-                  
-                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    
-                    <h6 class="text-uppercase fw-bold mb-4">
-                      Products
-                    </h6>
-                    <p>
-                      <a href="items.html" class="text-reset">New</a>
-                    </p>
-                    <p>
-                      <a href="items.html" class="text-reset">Used</a>
-                    </p>
-                    <p>
-                      <a href="items.html" class="text-reset">Discounted</a>
-                    </p>
                  
-                  </div>
                   
           
                  
@@ -97,13 +79,13 @@
                       Useful links
                     </h6>
                     <p>
-                      <a href="index.html" class="text-reset">Home</a>
+                      <a href="home.php" class="text-reset">Home</a>
                     </p>
                     <p>
-                      <a href="aboutus.html" class="text-reset">About Us</a>
+                      <a href="about.php" class="text-reset">About Us</a>
                     </p>
                     <p>
-                      <a href="ContactUs.html"class="text-reset">ContactUs</a>
+                      <a href="contact.php"class="text-reset">Contact Us</a>
                     </p>
                   
                   </div>
@@ -116,7 +98,7 @@
                     <p><i class="fas fa-home me-3"></i> Beirut,LB</p>
                     <p>
                       <i class="fas fa-envelope me-3"></i>
-                      ali@dw.com
+                      Electroworld@gmail.com
                     </p>
                     <p><i class="fas fa-phone me-3"></i> + 0961 776895632</p>
                   

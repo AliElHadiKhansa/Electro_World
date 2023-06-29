@@ -42,7 +42,15 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                    </div>
+                                  
+  <?php
+  if (isset($_GET['error'])) {
+
+   if ($_GET['error'] == 2) {
+ echo "<h1>Please login in order to buy</h1>";
+}
+} ?> 
+</div>
                                     <form class="user" action="login_action.php" method="POST">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
