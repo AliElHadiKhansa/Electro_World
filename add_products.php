@@ -22,7 +22,8 @@
     $result2 = mysqli_query($con, $query2);
 
     ?>
- <h1> Add Products </h1>
+  <div class="col-8 m-5">
+<center> <h1> Add Products </h1>
 <form class="user" action="add_products_action.php" method="POST" enctype="multipart/form-data">
                            <div class="form-group">
                            <div class="col-6 m-3 ">
@@ -100,8 +101,10 @@
 </a>
 
 </button>
-</div></div>     
+</div>
+</div>     
                             </form>
-
+            </center>
+            </div>
 </body>
 </html>

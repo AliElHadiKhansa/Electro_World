@@ -105,12 +105,31 @@ session_start();
                         <a class="collapse-item" href="view_brand.php">View Brand</a>
                     </div>
                 </div>
-            
+</li>
+<li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#OrdersTwo"
+                    aria-expanded="true" aria-controls="OrdersTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Orders</span>
+                </a>
+                <div id="OrdersTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Orders:</h6>
+                        <a class="collapse-item" href="pending_orders.php">Pending Orders</a>
+                        <a class="collapse-item" href="approved_orders.php">Approved Orders</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+
+<a href = "logout.php" style="margin:20px;color:white">LogOut </a>
+</li>
 
                     </ul>
 
                 </nav>
-
+<?php $name= $_SESSION['name']; e ?>
+<h1> Hello, <?php echo "$name"; ?></h1>
                 <!-- End of Topbar -->
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>

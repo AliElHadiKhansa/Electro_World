@@ -10,8 +10,8 @@
     <?php
     include "navbar.php";
     ?>
-    <div class="col-6">
-<center> <h1> Add Category </h1></center>
+    <div class="col-6 m-5">
+<center> <h1> Add Category </h1>
 <form class="user" action="add_category_action.php" method="POST">
                            <div class="form-group">
                              <input type="text" class="form-control form-control-user"
