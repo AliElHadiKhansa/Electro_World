@@ -47,7 +47,7 @@ include "navbar_user.php";
 include "db_config/connect.php";
 $id = $_GET['category'];
 // Assuming you have a database connection established
-$query = "SELECT * FROM product where categoryid = $id";
+$query = "SELECT * FROM product where categoryid = $id AND quantity > 0";
 $result = mysqli_query($con, $query);
 
 

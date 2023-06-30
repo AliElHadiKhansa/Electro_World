@@ -19,21 +19,22 @@
 <?php
     require "navbar_user.php" ;
     require "db_config/connect.php" ;
-$price = $_GET['price'];
-    $encodedCartIds = $_GET['cartIds']; // Retrieve the serialized cart IDs from the query string
+// $price = $_GET['price'];
+//     $encodedCartIds = $_GET['cartIds']; // Retrieve the serialized cart IDs from the query string
 
 // URL decode the cart IDs
-$decodedCartIds = urldecode($encodedCartIds);
+// $decodedCartIds = urldecode($encodedCartIds);
 
-// Unserialize the cart IDs into an array
-$cartIds = unserialize($decodedCartIds);
+// // Unserialize the cart IDs into an array
+// $cartIds = unserialize($decodedCartIds);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-
+  $cartIds=  $_SESSION['cartIds'];
+    $totalAmount=  $_SESSION['price'] ;
 
 
 foreach($cartIds as $cartId){
-    $updateCartSql = "UPDATE cart SET _deleted = 1 WHERE cart_id = '$cartId'";
+    $updateCartSql = "UPDATE cart SET is_deleted = 1 WHERE id = $cartId";
     $result = mysqli_query($con,$updateCartSql);
     
     $cart = "SELECT * from cart where id = $cartId";
@@ -43,15 +44,17 @@ $qty = $row['quantity'];
 
 $product_id = $row['productid'];
 $query = "Select * from product where id =$product_id";
-$res = mysqli_query($con,$query);
-$real = $row['quantity'] - $qty;
+$result_query = mysqli_query($con,$query);
+$res = mysqli_fetch_assoc($result_query);
+$normalqty = $res['quantity'];
+$real = $normalqty - $qty;
 $sql = "Update product set quantity= $real where id =$product_id";
 $res1 = mysqli_query($con,$sql);
 }
 $user_id = $_SESSION['id'];
 $address = $_POST['address'];
 $phone = $_POST['number'];
-   $ordersql="INSERT INTO order (userid,shippingaddress,phone,price, status) Values ($user_id,'$address','$phone',$price,'pending')"; 
+   $ordersql="INSERT INTO orders (user_id,shippingaddress,phone,price, status) Values ($user_id,'$address','$phone',$totalAmount,'pending')"; 
    $resorder = mysqli_query($con,$ordersql);
 }
  ?>

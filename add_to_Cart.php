@@ -15,7 +15,7 @@ if (!isset($_SESSION['id'])) {
 
 $user_id = $_SESSION['id'];
 $totalprice =$price * $quantity;
-$query1= "SELECT * from cart WHERE userid=$user_id AND productid=$id";
+$query1= "SELECT * from cart WHERE userid=$user_id AND productid=$id and is_deleted= 0";
 $result1= mysqli_query($con,$query1);
 if( mysqli_num_rows($result1) > 0){
     $row1 = mysqli_fetch_assoc($result1);

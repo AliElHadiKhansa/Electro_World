@@ -19,7 +19,7 @@ $id = $_SESSION['id'];
 $query = "SELECT cart.*, product.name AS product_name, product.price AS product_price 
           FROM cart 
           INNER JOIN product ON cart.productid = product.id 
-          WHERE cart.userid = $id";
+          WHERE cart.userid = $id AND cart.is_deleted = 0";
 
 $result = mysqli_query($con, $query);
 $cartIds = array();
@@ -64,11 +64,8 @@ $cart_id = $row['id'];
 
         $totalAmount += $subtotal;
     }
-    // Serialize the array into a string
-$serializedCartIds = serialize($cartIds);
-
-// URL encode the serialized cart IDs
-$encodedCartIds = urlencode($serializedCartIds);
+    $_SESSION['cartIds']=$cartIds;
+    $_SESSION['price'] = $totalAmount;
 
 
 
@@ -82,7 +79,7 @@ $encodedCartIds = urlencode($serializedCartIds);
     echo "</table>";
    
     echo "</form>";
-    echo"<a href ='order.php?cartIds=$encodedCartIds&price=$totalAmount' style='text_decoration:none; color:white' > <button class='btn btn-primary btn-user btn-block text-white' > Confirm </a>
+    echo"<a href ='order.php' style='text_decoration:none; color:white' > <button class='btn btn-primary btn-user btn-block text-white' > Confirm </a>
 
 </a>";
 } else {
